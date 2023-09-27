@@ -52,16 +52,77 @@ nav ul li a:hover {
     margin: auto;
     background-color: #555;
     height: 50px;
-    color: white;
     border-radius: 10px;
     margin-right: 5%;
-    margin-top: -4%;
-  }  
+    margin-top: 2.7%;
+    position: relative; /* Lägg till position: relative; på förälderselementet */
+    z-index: 1; /* Lägg till ett z-index-värde högre än andra element för att lägga det över dem */
+}
+
 nav #myLinks {
     display: none;
-  }
+    position: absolute; /* Lägg till position: absolute; för att positionera texten */
+    top: 0; /* Justera top-värdet efter behov för att placera texten */
+    left: 0; /* Justera left-värdet efter behov för att placera texten */
+    z-index: 2; /* Lägg till ett högre z-index-värde än förälderselementet för att texten ska ligga över det */
+}
+
+nav #myLinks a {
+    /* Ändra margin-top till 0 eller ett lämpligt värde */
+    display: block;
+    position: relative;
+    color: hsl(40, 36%, 69%);
+    top: 85px;
+    right: -150px;
+    padding: 32px;
+    margin-left: -600px;
+    background-color: #525151;
+    border-bottom: white solid 1px;
+    text-align: left;
+    font-size: 19px;
+}
+nav #myLinks a:hover {
+    background-color: #6e6d6d;
+}
+.mobile-container2 {
+    max-width: 50px;
+    margin: auto;
+    background-color: #555;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-top: 2.7%;
+    position: relative; /* Lägg till position: relative; på förälderselementet */
+    z-index: 1; /* Lägg till ett z-index-värde högre än andra element för att lägga det över dem */
+}
+
+nav #myLinks2 {
+    display: none;
+    position: absolute; /* Lägg till position: absolute; för att positionera texten */
+    top: 0; /* Justera top-värdet efter behov för att placera texten */
+    left: 0; /* Justera left-värdet efter behov för att placera texten */
+    z-index: 2; /* Lägg till ett högre z-index-värde än förälderselementet för att texten ska ligga över det */
+}
+
+nav #myLinks2 a {
+    /* Ändra margin-top till 0 eller ett lämpligt värde */
+    display: block;
+    position: relative;
+    color: hsl(40, 36%, 69%);
+    top: 77px;
+    right: -150px;
+    padding: 39px;
+    margin-left: -600px;
+    background-color: #525151;
+    border-bottom: white solid 1px;
+    text-align: left;
+    font-size: 19px;
+}
+nav #myLinks2 a:hover {
+    background-color: #6e6d6d;
+}
 nav a {
-    color: white;
+    color: #cdba94;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -132,11 +193,13 @@ footer {
 .contact-info, .opening-hours, .social-media {
     flex: 1;
     margin-right: 20px;
+    text-align: center;
 }
 
 .contact-info h3, .opening-hours h3, .social-media h3 {
     font-size: 18px;
     color:#cdba94;
+    text-align: center;
 }
 
 /* Style the social media icons */
@@ -167,9 +230,18 @@ footer {
 .copyright a:hover {
     text-decoration: underline;
 }
-.meny img{
+.meny {
+    overflow: hidden;
+    width: 90%;
+    height: auto;
+    position: relative;
+    left: 5%;
+}
+
+.meny img {
     width: 100%;
-    margin-top: 1%;
+    position: relative;
+    margin-top: 5%;
 }
 .oss img {
     width: 100%;
@@ -199,12 +271,54 @@ footer {
     font-weight: bold;
     text-align: left;
 }
-
+.kontaktbox {
+    position: relative;
+    width: 90%;
+    height: 355px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 12%;
+    left: 5%;
+    border: solid 2px #333;
+}
+.kontaktbox h1 {
+    text-align: left;
+    margin-left: 8%;
+}
+.kontaktbox p {
+    position: relative;
+    top:5%;
+    padding: 15px;
+    left: 5%;
+    text-align: left;
+    color:#cdba94;
+}
+.kontaktbox2 {
+    position: relative;
+    width: 90%;
+    height: 355px;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 12%;
+    left: 5%;
+    border: solid 2px #333;
+}
+.kontaktbox2 h1 {
+    text-align: left;
+    margin-left: 9%;
+    font-size: 45px;
+}
+.kontaktbox2 p {
+    position: relative;
+    top:5%;
+    padding: 20px;
+    left: 5%;
+    font-size: 20px;
+    text-align: left;
+    color:#cdba94;
+}
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
   }
-  
   @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
@@ -236,7 +350,7 @@ footer {
 
     /* Dölj/sektioner på mobilskärmar */
     .contact-info, .opening-hours, .social-media {
-        display: none;
+      display: none;
     }
     .slides fade {
         display: none;
@@ -254,6 +368,33 @@ footer {
         position: absolute;
         top: 35%;
         display: block;
+    }
+    .oss img {
+        display: none;
+    }
+    .text-container{
+        display: block;
+        background-color: white;
+        margin-top: 15px;
+        text-align: left;
+        position: relative;
+        width: 90%;
+        left: -2px;
+    }
+    .textbox1 h1, p {
+        color: black;
+        position: relative;
+        top: -30px;
+    }
+    .textbox1 {
+        position: relative;
+    }
+    .meny img {
+        width: 100%;
+        position: relative;
+        margin-top:40px;
+        display: none;
+        height: 360px;
     }
 }
 @media screen and (min-width: 601px) and (max-width: 1600px) {
@@ -277,5 +418,24 @@ footer {
         .slideshow-image:first-child {
             display: block;
         }
+        .mobile-container {
+            display: none;
+        }
+        .mobile-container2 {
+            display: none;
+        }
+}
+@media screen and (min-width: 601px) and (max-width: 1100px) {
+    .text-container {
+        width: 40%;
+        margin-left: 30%;
+        background-color: white;
+        margin-bottom: 2%;
+    }
+    .textbox1 {
+        width: 100%;
+        margin-top: -6%;
+        font-size: 16px;
+    }
 }
 
