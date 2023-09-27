@@ -1,0 +1,281 @@
+@charset "utf-8";
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    color: #cdba94;
+    font-family: 'Concert One', cursive;
+}
+
+/* Stil för sidhuvudet */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    height: 80px;
+}
+
+/* Stil för logotypen */
+.logo img {
+    height: auto;
+    width: 200px;
+    float: left;
+    margin-left: 2%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin for the last list item */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #cdba94;
+    font-weight: bold;
+    float: right;
+    padding: 5px;
+    font-size: 20px;
+}
+nav ul li a:hover {
+    color: #fde6b6;
+    border-bottom: solid 1px #fde6b6;
+}
+.mobile-container {
+    max-width: 50px;
+    margin: auto;
+    background-color: #555;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-top: -4%;
+  }  
+nav #myLinks {
+    display: none;
+  }
+nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+/* Stil för huvudrubrik */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Stil för knappen för att beställa mat */
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh; /* Detta kommer att centrera innehållet på hela skärmen. Du kan ändra höjden efter behov. */
+}
+
+.beställ-knapp {
+    background-color: #333;
+    color: #cdba94;
+    font-size: 18px;
+    padding: 20px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    font-size: 30px;
+    font-style: bold;
+    top: 80%;
+    left: 40%;
+    right: 40%;
+}
+.beställ-knapp:hover {
+    background-color: #525252;
+    color:#fde6b6;
+}
+.slideshow-container {
+    max-width: 1300px;
+    margin: auto;
+    position: relative;
+  }
+  
+.slide {
+display: none;
+  }
+.slideshow-container img {
+    width: 100%;
+}
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #cdba94;
+    padding: 20px 0;
+}
+
+/* Style the footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Style the contact information */
+.contact-info, .opening-hours, .social-media {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-info h3, .opening-hours h3, .social-media h3 {
+    font-size: 18px;
+    color:#cdba94;
+}
+
+/* Style the social media icons */
+.social-icon {
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #cdba94;
+    font-weight: bold;
+}
+
+.social-icon:hover {
+    text-decoration: underline;
+}
+
+/* Style the copyright notice */
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: #cdba94;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+.meny img{
+    width: 100%;
+    margin-top: 1%;
+}
+.oss img {
+    width: 100%;
+    margin-top: 1%;
+}
+.oss {
+    position: relative; /* Gör .oss till en relativ position för att placera texten i förhållande till bilden */
+}
+
+.text-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5%;
+    background: rgba(0, 0, 0, 0.7); /* Bakgrundsfärg för texten (justera efter behov) */
+    color: white; /* Textfärg för texten (justera efter behov) */
+    padding: 20px; /* Lägg till önskad padding för texten */
+    width: 40%;
+    top: 15%;
+    float: right;
+}
+
+.textbox1 {
+    /* Stilar för din text (justera efter behov) */
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: bold;
+    text-align: left;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  @media screen and (max-width: 600px) {
+    /* Dölj navigationslänkar */
+    nav ul {
+        display: none;
+    }
+
+    /* Justera positionen av .beställ-knapp */
+    .beställ-knapp {
+        position: fixed;
+        bottom: 0;
+        left: -23px;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
+    /* Justera positionen av fotern */
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+    }
+
+    /* Dölj/sektioner på mobilskärmar */
+    .contact-info, .opening-hours, .social-media {
+        display: none;
+    }
+    .slides fade {
+        display: none;
+    }
+    .mobile {
+        max-width: 100%; /* Behåll bildens bredd inom skärmbredden */
+        height: auto; /* Anpassa höjden efter behov */
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+    .text-container {
+        width: 100%;
+        position: absolute;
+        top: 35%;
+        display: block;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1600px) {
+    .mobile {
+        max-width: 100%;
+        height: auto;
+        display: none;
+    }
+        .slideshow-container2 {
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+    
+        .slideshow-image {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+    
+        .slideshow-image:first-child {
+            display: block;
+        }
+}
+

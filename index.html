@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\style.css">
+    <title>Kimli - Start</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"> <!--Det här nedan är funktionen för min Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Concert+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index3.html">Om oss</a></li>
+                <li><a href="#footer">Kontakt</a></li>
+                <li><a href="#footer">Öppetider</a></li>
+                <li><a href="index2.html">Meny</a></li>
+            </ul>
+            <div class="mobile-container">
+            <div id="myLinks">
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+        </nav>
+    </header>
+    <a href="#" class="beställ-knapp">BESTÄLL MAT</a> 
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="images/bild1.png" alt="Slide 1" class="desktop">
+        </div>
+        <div class="slide fade">
+            <img src="images/bild2.png" alt="Slide 2" class="desktop">
+        </div>
+        <div class="slide fade">
+            <img src="images/bild3.png" alt="Slide 3" class="desktop">
+        </div>
+        <div class="slideshow-container">
+        <img src="images/res1.png" alt="Mobilbild 1" class="mobile">
+
+    </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Kontaktinformation</h3>
+                <p>Klarabergsgatan 29-31</p>
+                <p>Stockholm</p>
+                <p>Telefon: 123-456-789</p>
+                <p>Email: </p>
+            </div>
+            <div class="opening-hours">
+                <h3>Öppettider</h3>
+                <p>Måndag-torsdag: 11:00 - 22:00</p>
+                <p>Fredag-Lördag: 11:00 - 23:00</p>
+                <p>Söndag: 11:00 - 21:00</p>
+            </div>
+            <div class="social-media">
+                <h3>Följ oss</h3>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Instagram</a>
+                <a href="#" class="social-icon">Twitter</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Kimli & Bao
+        </div>
+    </footer>
+    <main>
+    </main>
+    <script>
+        let slideIndex = 0;
+    
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    
+        showSlides();
+        let currentSlide = 0;
+const slides = document.querySelectorAll('.slideshow-image');
+
+function nextSlide() {
+    slides[currentSlide].style.display = 'none';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].style.display = 'block';
+}
+
+setInterval(nextSlide, 3000); // Byt bild var 3 sekunder
+
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+    </script>
+</body>
+</html>
